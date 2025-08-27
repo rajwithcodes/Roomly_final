@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate") %>
+
+<!-- Hero Section -->
+<section style="background: linear-gradient(90deg, #d29fd3, #b265b3);" class="text-center text-white py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Rooooooomly</h1>
+        <p class="lead">Find your perfect room — Fast, Easy, and Reliable</p>
+        <a href="/listings" class="btn shadow mt-3" style="background-color: #9f5a9e; color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: bold; transition: background-color 0.3s;">
+            Find your Space
+        </a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5" style="background-color: #fcf7fc;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5" style="color: #5a3558;">Why Choose Roomly?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow border-0 h-100" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="card-body">
+                        <i class="fas fa-search fa-2x mb-3" style="color: #d29fd3;"></i>
+                        <h5 class="card-title fw-bold" style="color: #5a3558;">Easy Search</h5>
+                        <p class="text-muted">Find rooms quickly with advanced filters and search options.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow border-0 h-100" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="card-body">
+                        <i class="fas fa-check-circle fa-2x mb-3" style="color: #b265b3;"></i>
+                        <h5 class="card-title fw-bold" style="color: #5a3558;">Verified Listings</h5>
+                        <p class="text-muted">All listings are verified to ensure trust and safety.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow border-0 h-100" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="card-body">
+                        <i class="fas fa-comments fa-2x mb-3" style="color: #834881;"></i>
+                        <h5 class="card-title fw-bold" style="color: #5a3558;">Direct Contact</h5>
+                        <p class="text-muted">Message owners directly, no middleman involved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hover Effect Script -->
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
+            card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.15)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+        });
+    });
+
+    // Hero button hover
+    const heroBtn = document.querySelector('section .btn');
+    heroBtn.addEventListener('mouseenter', () => {
+        heroBtn.style.backgroundColor = '#834881';
+    });
+    heroBtn.addEventListener('mouseleave', () => {
+        heroBtn.style.backgroundColor = '#9f5a9e';
+    });
+</script>
